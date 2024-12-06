@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+  <head>
+    <title th:text="${title}">Paty Blogging Application</title>
+    <style>
+      body {
+        font-family: Arial, sans-serif;
+        background-color: #f4f4f4;
+        margin: 0;
+        padding: 0;
+        line-height: 1.6;
+      }
+      .container {
+        width: 80%;
+        margin: auto;
+        overflow: hidden;
+        background: #fff;
+        padding: 20px;
+        border-radius: 10px;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+      }
+      h1 {
+        color: #333;
+      }
+      p {
+        font-size: 18px;
+        color: #666;
+      }
+      .header {
+        text-align: center;
+        padding: 20px;
+      }
+      .header img {
+        max-width: 100%;
+        border-radius: 10px;
+      }
+      .button-container {
+        text-align: center;
+        margin: 20px 0;
+      }
+      .button {
+        display: inline-block;
+        padding: 10px 20px;
+        font-size: 16px;
+        color: #fff;
+        background-color: #007bff;
+        border: none;
+        border-radius: 5px;
+        text-decoration: none;
+        cursor: pointer;
+        transition: background-color 0.3s ease;
+      }
+      .button:hover {
+        background-color: #0056b3;
+      }
+      .footer {
+        text-align: center;
+        margin-top: 20px;
+        padding: 10px;
+        background: #333;
+        color: #fff;
+        border-radius: 0 0 10px 10px;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <div class="header">
+        <img
+          src="https://source.unsplash.com/random/800x400?nature,water"
+          alt="Header Image"
+        />
+      </div>
+      <h1 th:text="${title}">Email Title</h1>
+      <p th:utext="${content}">Email Content</p>
+      <div class="button-container">
+        <a href="${link}" target="_blank" class="button">Click Here to Continue Reading</a>
+      </div>
+      <div class="footer">
+        <p>&copy; 2024 Paty Blogging Application. All rights reserved.</p>
+      </div>
+    </div>
+  </body>
+</html>
