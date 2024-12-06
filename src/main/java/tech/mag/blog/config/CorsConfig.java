@@ -13,7 +13,7 @@ public class CorsConfig {
     public CorsConfigurationSource corsConfigurationSource() {
         CorsConfiguration config = new CorsConfiguration();
         config.setAllowCredentials(true);
-        config.addAllowedOriginPattern("*"); // Allow all origins or specify the frontend origin explicitly
+        config.addAllowedOriginPattern("https://blog-app-frontend-p4xk.onrender.com"); // Allow all origins or specify the frontend origin explicitly
         config.addAllowedHeader("*"); // Allow all headers
         config.addAllowedMethod("*"); // Allow all HTTP methods
 
